@@ -363,7 +363,7 @@ export default {
           console.log(`this.$refs.nombre.value`);
           await axios({
             method: "put",
-            url: `https://electorbackend.herokuapp.com/candidatoAdmin${this.idKey}`,
+            url: `https://electorbackend.herokuapp.com/candidatoAdmin/${this.idKey}`,
             data: {
               nombre: `${this.$refs.nombre.value}`,
               edad: `${this.$refs.edad.value}`,

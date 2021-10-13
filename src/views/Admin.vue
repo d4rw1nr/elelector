@@ -344,7 +344,7 @@ export default {
           console.log("En modo agregar...");
           await axios({
             method: "post",
-            url: "http://localhost:3000/candidatoAdmin",
+            url: "https://electorbackend.herokuapp.com/candidatoAdmin",
             data: {
               nombre: `${this.$refs.nombre.value}`,
               edad: `${this.$refs.edad.value}`,
@@ -363,7 +363,7 @@ export default {
           console.log(`this.$refs.nombre.value`);
           await axios({
             method: "put",
-            url: `http://localhost:3000/candidatoAdmin/${this.idKey}`,
+            url: `https://electorbackend.herokuapp.com/${this.idKey}`,
             data: {
               nombre: `${this.$refs.nombre.value}`,
               edad: `${this.$refs.edad.value}`,
@@ -413,7 +413,7 @@ export default {
       console.log("Metodo showCandi");
       const axioss = require("axios");
       await axioss
-        .get("http://localhost:3000/candidatoAdmin")
+        .get("https://electorbackend.herokuapp.com/candidatoAdmin")
         .then(function (response) {
           // handle success
           console.log(response.data);
@@ -459,7 +459,7 @@ export default {
 
       await axios({
         method: "delete",
-        url: `http://localhost:3000/candidatoAdmin/${this.idKey}`,
+        url: `https://electorbackend.herokuapp.com/candidatoAdmin/${this.idKey}`,
       }).catch(function (error) {
         // handle error
         console.log(error);

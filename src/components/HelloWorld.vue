@@ -65,22 +65,6 @@
     <v-divider class="mt-0 grey darken-3"></v-divider>
     <br>
     <carousel-candidate/>
-    <v-divider></v-divider>
-    <center>
-      <h1>Novedades</h1>
-    </center>
-
-    <v-carousel v-model="model">
-      <v-carousel-item v-for="(color, i) in colorsNotice" :key="color">
-        <v-sheet :color="color" height="100%" tile>
-          <v-row class="fill-height" align="center" justify="center">
-            <div class="text-h2" @click="getNotice(i)">
-              Noticias {{ i + 1 }}
-            </div>
-          </v-row>
-        </v-sheet>
-      </v-carousel-item>
-    </v-carousel>
   </div>
 </template>
 

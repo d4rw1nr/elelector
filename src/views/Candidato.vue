@@ -65,18 +65,18 @@ export default {
     CandidateTimeline2,
   },
   methods: {
-    async showCadidates() {
+    showCadidates() {
       this.listaCandidatos = [];
       let listaCandidatos = this.listaCandidatos;
 
       const axios = require("axios");
-      await axios
+      axios
         .get("https://electorbackend.herokuapp.com/candidatoAdmin")
         .then(function (response) {
           // handle success
           console.log(response.data[0].nombre);
-          response.data.forEach(async (candidate) => {
-            await listaCandidatos.push(candidate);
+          response.data.forEach((candidate) => {
+            listaCandidatos.push(candidate);
           });
         })
         .catch(function (error) {

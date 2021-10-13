@@ -71,7 +71,7 @@ export default {
 
       const axios = require("axios");
       await axios
-        .get("http://localhost:3000/candidatoAdmin")
+        .get("https://electorbackend.herokuapp.com/candidatoAdmin")
         .then(function (response) {
           // handle success
           console.log(response.data[0].nombre);
